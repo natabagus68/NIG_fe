@@ -197,9 +197,13 @@ export default function ApprovalReport() {
               <Outlet />
             </aprovalContext.Provider>
           </div>
+          {}
           <div className="flex border-t mt-4 py-[16px] px-[32px] bg-[#FFFFFF] justify-end">
             <button
-              className="py-[12px] px-[20px] rounded-md text-[#FFFFFF] bg-[#14988B] flex items-center gap-2"
+              className={`py-[12px] px-[20px] rounded-md text-[#FFFFFF] ${
+                model?.data?.inspection.opt ? "bg-[#14988B]" : "bg-neutral-400 "
+              }  flex items-center gap-2`}
+              disabled={model?.data?.inspection.opt ? true : false}
               onClick={model.onConfirm}
             >
               <ConfirmCheck />
