@@ -11,7 +11,7 @@ export default function useAdmin() {
   // avatar status
   const [isOpenAvatar, setIsOpenavatar] = useState(false);
   // loading state
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   // navbar status click
   const onOpenNavbar = (): void => {
@@ -66,7 +66,7 @@ export default function useAdmin() {
   };
 
   useEffect(() => {
-    onIsMe();
+    // onIsMe();
   }, []);
 
   return {
